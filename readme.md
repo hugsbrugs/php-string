@@ -41,3 +41,7 @@ $bool = HString::ends_with($haystack, $needle);
 ```
 composer exec phpunit
 ```
+
+## Author
+
+Hugo Maugey [visit my website ;)](https://hugo.maugey.fr)
