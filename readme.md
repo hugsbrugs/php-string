@@ -39,7 +39,7 @@ $bool = HString::ends_with($haystack, $needle);
 ## Unit Tests
 
 ```
-composer exec phpunit
+phpunit --bootstrap vendor/autoload.php tests
 ```
 
 ## Author
