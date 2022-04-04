@@ -102,6 +102,24 @@ class HString
     }
 
     /**
+     * Test if a string contains utf8mb4 characters meaning chars encoded on 4 bytes
+     *
+     * @param string $str
+     *
+     * @return bool $is_utf8mb4
+     *
+     * @link https://stackoverflow.com/questions/16496554/can-php-detect-4-byte-encoded-utf8-chars
+     */
+    public static function is_utf8mb4($string)
+    {
+        if (max(array_map('ord', str_split($string))) >= 240){
+            return true;
+        }
+        return false;
+    }
+
+
+    /**
      * Nettoye un texte
      *
      * @param string $str string to be cleaned

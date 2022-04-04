@@ -36,6 +36,12 @@ Checks whether a string ends with given chars
 $bool = HString::ends_with($haystack, $needle);
 ```
 
+Checks whether a string contains utf8mb4 chars (Chars coded on 4 bytes)
+```php
+$bool = HString::is_utf8mb4($search);
+```
+
+
 ## Unit Tests
 
 ```

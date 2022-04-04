@@ -95,6 +95,30 @@ final class HStringTest extends TestCase
         $this->assertFalse($test);
     }
 
+    /* ************************************************* */
+    /* *************** HString::is_utf8mb4 ************* */
+    /* ************************************************* */
+
+    /**
+     *
+     */
+    public function testCanIsUtf8mb4()
+    {
+        $test = HString::is_utf8mb4("Coucou toi ! 💅🏼");
+        $this->assertIsBool($test);
+        $this->assertTrue($test);
+    }
+
+    /**
+     *
+     */
+    public function testCannotIsUtf8mb4()
+    {
+        $test = HString::is_utf8mb4("Coucou toi ! ✨");
+        $this->assertIsBool($test);
+        $this->assertFalse($test);
+    }
+
 
 }
 
